@@ -1,0 +1,11 @@
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\bin\Debug\net9.0\LeaveManagementSystem.DOMAINE.deps.json
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\bin\Debug\net9.0\LeaveManagementSystem.DOMAINE.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\bin\Debug\net9.0\LeaveManagementSystem.DOMAINE.pdb
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\LeaveManagementSystem.DOMAINE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\LeaveManagementSystem.DOMAINE.AssemblyInfoInputs.cache
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\LeaveManagementSystem.DOMAINE.AssemblyInfo.cs
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\LeaveManagementSystem.DOMAINE.csproj.CoreCompileInputs.cache
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\LeaveManagementSystem.DOMAINE.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\refint\LeaveManagementSystem.DOMAINE.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\LeaveManagementSystem.DOMAINE.pdb
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\ref\LeaveManagementSystem.DOMAINE.dll

@@ -1,0 +1,15 @@
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\bin\Debug\net9.0\LeaveManagementSystem.DATA.deps.json
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\bin\Debug\net9.0\LeaveManagementSystem.DATA.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\bin\Debug\net9.0\LeaveManagementSystem.DATA.pdb
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\bin\Debug\net9.0\LeaveManagementSystem.DOMAINE.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\bin\Debug\net9.0\LeaveManagementSystem.DOMAINE.pdb
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.csproj.AssemblyReference.cache
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.AssemblyInfoInputs.cache
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.AssemblyInfo.cs
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.csproj.CoreCompileInputs.cache
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveMan.8CA76576.Up2Date
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\refint\LeaveManagementSystem.DATA.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.pdb
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\ref\LeaveManagementSystem.DATA.dll
