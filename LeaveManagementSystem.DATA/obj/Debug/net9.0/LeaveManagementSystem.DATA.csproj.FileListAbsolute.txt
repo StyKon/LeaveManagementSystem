@@ -13,3 +13,6 @@ C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\refint\LeaveManagementSystem.DATA.dll
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.pdb
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\ref\LeaveManagementSystem.DATA.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.sourcelink.json
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\bin\Debug\net9.0\LeaveManagementSystem.DATA.runtimeconfig.json
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DATA\obj\Debug\net9.0\LeaveManagementSystem.DATA.genruntimeconfig.cache

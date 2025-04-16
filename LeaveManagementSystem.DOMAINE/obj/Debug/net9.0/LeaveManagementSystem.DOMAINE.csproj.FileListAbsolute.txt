@@ -9,3 +9,4 @@ C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAI
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\refint\LeaveManagementSystem.DOMAINE.dll
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\LeaveManagementSystem.DOMAINE.pdb
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\ref\LeaveManagementSystem.DOMAINE.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.DOMAINE\obj\Debug\net9.0\LeaveManagementSystem.DOMAINE.sourcelink.json
