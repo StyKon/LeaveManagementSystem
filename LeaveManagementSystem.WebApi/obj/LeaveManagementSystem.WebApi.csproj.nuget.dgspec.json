@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem\\LeaveManagementSystem.WebApi.csproj": {}
+    "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj": {}
   },
   "projects": {
     "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj": {
@@ -158,14 +158,14 @@
         }
       }
     },
-    "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem\\LeaveManagementSystem.WebApi.csproj": {
+    "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem\\LeaveManagementSystem.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj",
         "projectName": "LeaveManagementSystem.WebApi",
-        "projectPath": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem\\LeaveManagementSystem.WebApi.csproj",
+        "projectPath": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj",
         "packagesPath": "C:\\Users\\Khouloud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
