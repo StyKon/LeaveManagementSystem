@@ -1,3 +1,4 @@
+using AutoMapper;
 using LeaveManagementSystem.DATA.Dto;
 using LeaveManagementSystem.DATA.Services;
 using LeaveManagementSystem.DOMAINE.Entities;
@@ -12,11 +13,15 @@ namespace LeaveManagementSystem.Controllers
 
         private readonly ILogger<LeaveRequestController> _logger;
         private readonly ILeaveRequestService _leaveRequestService;
+        private readonly IMapper _mapper;
 
-        public LeaveRequestController(ILogger<LeaveRequestController> logger,ILeaveRequestService leaveRequestService)
+        public LeaveRequestController(ILogger<LeaveRequestController> logger,
+            ILeaveRequestService leaveRequestService,
+            IMapper mapper)
         {
             _logger = logger;
             _leaveRequestService = leaveRequestService;
+            _mapper = mapper;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<LeaveRequestDto>>> Get()
@@ -27,18 +32,7 @@ namespace LeaveManagementSystem.Controllers
             {
                 return BadRequest(result.Message);
             }
-
-            var leaveRequestDtos = result.Data.Select(x => new LeaveRequestDto
-            {
-                Id = x.Id,
-                CreatedAt = x.CreatedAt,
-                EmployeeId = x.EmployeeId,
-                EndDate = x.EndDate,
-                LeaveType = x.LeaveType,
-                Reason = x.Reason,
-                StartDate = x.StartDate,
-                Status = x.Status
-            });
+            var leaveRequestDtos = _mapper.Map<IEnumerable<LeaveRequestDto>>(result.Data);
 
             return Ok(leaveRequestDtos);
         }
@@ -53,17 +47,7 @@ namespace LeaveManagementSystem.Controllers
                 return NotFound(result.Message);
             }
 
-            var dto = new LeaveRequestDto
-            {
-                Id = result.Data.Id,
-                CreatedAt = result.Data.CreatedAt,
-                EmployeeId = result.Data.EmployeeId,
-                EndDate = result.Data.EndDate,
-                LeaveType = result.Data.LeaveType,
-                Reason = result.Data.Reason,
-                StartDate = result.Data.StartDate,
-                Status = result.Data.Status
-            };
+            var dto = _mapper.Map<LeaveRequestDto>(result.Data);
 
             return Ok(dto);
         }
@@ -73,16 +57,8 @@ namespace LeaveManagementSystem.Controllers
             if (leaveRequestDto == null)
                 return BadRequest("Leave request data is missing.");
 
-            var leaveRequest = new LeaveRequest
-            {
-                CreatedAt = DateTime.UtcNow,
-                EmployeeId = leaveRequestDto.EmployeeId,
-                EndDate = leaveRequestDto.EndDate,
-                LeaveType = leaveRequestDto.LeaveType,
-                Reason = leaveRequestDto.Reason,
-                StartDate = leaveRequestDto.StartDate,
-                Status = leaveRequestDto.Status
-            };
+            var leaveRequest = _mapper.Map<LeaveRequest>(leaveRequestDto);
+            leaveRequest.CreatedAt = DateTime.Now;
 
             var result = await _leaveRequestService.CreateLeaveRequestAsync(leaveRequest);
 
@@ -102,12 +78,8 @@ namespace LeaveManagementSystem.Controllers
             if (!existingResult.Success || existingResult.Data == null)
                 return NotFound(existingResult.Message);
 
-            var updatedLeaveRequest = existingResult.Data;
-            updatedLeaveRequest.EndDate = leaveRequestDto.EndDate;
-            updatedLeaveRequest.LeaveType = leaveRequestDto.LeaveType;
-            updatedLeaveRequest.Reason = leaveRequestDto.Reason;
-            updatedLeaveRequest.StartDate = leaveRequestDto.StartDate;
-            updatedLeaveRequest.Status = leaveRequestDto.Status;
+            var updatedLeaveRequest = _mapper.Map<LeaveRequest>(leaveRequestDto);
+            updatedLeaveRequest.Id = id;
 
             var updateResult = await _leaveRequestService.UpdateLeaveRequestAsync(updatedLeaveRequest);
 

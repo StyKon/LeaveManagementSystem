@@ -324,3 +324,5 @@ C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebAp
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebApi\obj\Debug\net9.0\LeaveManagementSystem.WebApi.pdb
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebApi\obj\Debug\net9.0\LeaveManagementSystem.WebApi.genruntimeconfig.cache
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebApi\obj\Debug\net9.0\ref\LeaveManagementSystem.WebApi.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebApi\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebApi\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
