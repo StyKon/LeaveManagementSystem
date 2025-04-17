@@ -113,6 +113,16 @@ namespace LeaveManagementSystem.Controllers
 
             return NoContent();
         }
+        [HttpPost("{id}/approve")]
+        public async Task<IActionResult> Approve(int id)
+        {
+            var result = await _leaveRequestService.ApproveLeaveRequestAsync(id);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            return Ok(result.Message);
+        }
+
 
     }
 }

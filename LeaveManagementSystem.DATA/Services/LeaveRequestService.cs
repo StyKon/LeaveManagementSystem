@@ -172,6 +172,21 @@ namespace LeaveManagementSystem.DATA.Services
                 return EntityResult<PagedResult<LeaveRequest>>.FailureResult($"Error during filtering: {ex.Message}");
             }
         }
+        public async Task<EntityResult<int>> ApproveLeaveRequestAsync(int id)
+        {
+            var leave = await _leaveRequestRepository.GetByIdAsync(id);
+
+            if (leave == null)
+                return EntityResult<int>.FailureResult("Leave request not found.");
+
+            if (leave.Status != LeaveStatus.Pending)
+                return EntityResult<int>.FailureResult("Only pending requests can be approved.");
+
+            leave.Status = LeaveStatus.Approved;
+            var result = await _leaveRequestRepository.UpdateAsync(leave);
+
+            return EntityResult<int>.SuccessResult(result, "Leave request approved.");
+        }
 
         private async Task<EntityResult<int>> ValidateLeaveRequestAsync(LeaveRequest leaveRequest)
         {
@@ -233,6 +248,7 @@ namespace LeaveManagementSystem.DATA.Services
         Task<EntityResult<int>> DeleteLeaveRequestAsync(int id);
         Task<EntityResult<int>> DeleteLeaveRequestAsync(LeaveRequest leaveRequest);
         Task<EntityResult<PagedResult<LeaveRequest>>> FilterLeaveRequestsAsync(LeaveRequestFilterDto filterDto);
+        Task<EntityResult<int>> ApproveLeaveRequestAsync(int id);
 
     }
 
