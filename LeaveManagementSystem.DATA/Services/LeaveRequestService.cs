@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LeaveManagementSystem.DATA.Common;
+using LeaveManagementSystem.DATA.Dto;
 using LeaveManagementSystem.DATA.Repositories;
 using LeaveManagementSystem.DOMAINE.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace LeaveManagementSystem.DATA.Services
 {
@@ -98,6 +100,57 @@ namespace LeaveManagementSystem.DATA.Services
             }
         }
 
+        public async Task<EntityResult<PagedResult<LeaveRequest>>> FilterLeaveRequestsAsync(LeaveRequestFilterDto filterDto)
+        {
+            try
+            {
+                var query = _leaveRequestRepository.GetZ(x =>
+                    (filterDto.EmployeeId == null || x.EmployeeId == filterDto.EmployeeId) &&
+                    (filterDto.Status == null || x.Status == filterDto.Status) &&
+                    (filterDto.LeaveType == null || x.LeaveType == filterDto.LeaveType) &&
+                    (filterDto.StartDate == null || x.StartDate >= filterDto.StartDate) &&
+                    (filterDto.EndDate == null || x.EndDate <= filterDto.EndDate) &&
+                    (filterDto.Keyword == null || x.Reason.Contains(filterDto.Keyword))
+                );
+
+                var totalItems = await query.CountAsync();
+
+
+                if (filterDto.SortBy?.ToLower() == "startdate")
+                {
+                    query = filterDto.SortOrder?.ToLower() == "desc"
+                        ? query.OrderByDescending(x => x.StartDate)
+                        : query.OrderBy(x => x.StartDate);
+                }
+                else
+                {
+                    query = filterDto.SortOrder?.ToLower() == "desc"
+                        ? query.OrderByDescending(x => x.CreatedAt)
+                        : query.OrderBy(x => x.CreatedAt);
+                }
+
+                query = query
+                    .Skip(Math.Max(0, (filterDto.Page - 1)) * filterDto.PageSize)
+                    .Take(filterDto.PageSize);
+
+                var items = await query.ToListAsync();
+
+
+                var pagedResult = new PagedResult<LeaveRequest>
+                {
+                    Items = items,
+                    TotalItems = totalItems,
+                    Page = filterDto.Page,
+                    PageSize = filterDto.PageSize
+                };
+
+                return EntityResult<PagedResult<LeaveRequest>>.SuccessResult(pagedResult, "Filtered results retrieved.");
+            }
+            catch (Exception ex)
+            {
+                return EntityResult<PagedResult<LeaveRequest>>.FailureResult($"Error during filtering: {ex.Message}");
+            }
+        }
     }
     public interface ILeaveRequestService
     {
@@ -107,6 +160,8 @@ namespace LeaveManagementSystem.DATA.Services
         Task<EntityResult<int>> UpdateLeaveRequestAsync(LeaveRequest leaveRequest);
         Task<EntityResult<int>> DeleteLeaveRequestAsync(int id);
         Task<EntityResult<int>> DeleteLeaveRequestAsync(LeaveRequest leaveRequest);
+        Task<EntityResult<PagedResult<LeaveRequest>>> FilterLeaveRequestsAsync(LeaveRequestFilterDto filterDto);
+
     }
 
 }

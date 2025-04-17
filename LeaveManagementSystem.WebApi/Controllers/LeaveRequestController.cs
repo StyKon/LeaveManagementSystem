@@ -1,4 +1,5 @@
 using AutoMapper;
+using LeaveManagementSystem.DATA.Common;
 using LeaveManagementSystem.DATA.Dto;
 using LeaveManagementSystem.DATA.Services;
 using LeaveManagementSystem.DOMAINE.Entities;
@@ -36,6 +37,16 @@ namespace LeaveManagementSystem.Controllers
 
             return Ok(leaveRequestDtos);
         }
+        [HttpGet("filter")]
+        public async Task<IActionResult> Filter([FromQuery] LeaveRequestFilterDto filterDto)
+        {
+            var result = await _leaveRequestService.FilterLeaveRequestsAsync(filterDto);
+            if (!result.Success) return BadRequest(result.Message);
+
+            var dtoResult = _mapper.Map<PagedResult<LeaveRequestDto>>(result.Data);
+            return Ok(dtoResult);
+        }
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<LeaveRequestDto>> GetLeaveRequest(int id)
