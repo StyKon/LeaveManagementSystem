@@ -123,53 +123,84 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "EmployeeId",
+        "Name": "employeeId",
         "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
-        "Name": "LeaveType",
+        "Name": "leaveType",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "Status",
+        "Name": "status",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "StartDate",
+        "Name": "startDate",
         "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
-        "Name": "EndDate",
+        "Name": "endDate",
         "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       },
       {
-        "Name": "Page",
+        "Name": "page",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "PageSize",
+        "Name": "pageSize",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "SortBy",
+        "Name": "sortBy",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "SortOrder",
+        "Name": "sortOrder",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "Keyword",
+        "Name": "keyword",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LeaveManagementSystem.Controllers.LeaveRequestController",
+    "Method": "GetReport",
+    "RelativePath": "api/leaverequests/report",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "department",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fromDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "toDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
       }
     ],

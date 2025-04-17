@@ -113,6 +113,16 @@ namespace LeaveManagementSystem.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("report")]
+        public async Task<IActionResult> GetReport([FromQuery] LeaveReportFilterDto filter)
+        {
+            var result = await _leaveRequestService.GetLeaveReportAsync(filter);
+
+            return Ok(result);
+        }
+
+
         [HttpPost("{id}/approve")]
         public async Task<IActionResult> Approve(int id)
         {

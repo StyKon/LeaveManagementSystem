@@ -126,33 +126,33 @@ namespace LeaveManagementSystem.DATA.Services
             try
             {
                 var query = _leaveRequestRepository.GetZ(x =>
-                    (filterDto.EmployeeId == null || x.EmployeeId == filterDto.EmployeeId) &&
-                    (filterDto.Status == null || x.Status == filterDto.Status) &&
-                    (filterDto.LeaveType == null || x.LeaveType == filterDto.LeaveType) &&
-                    (filterDto.StartDate == null || x.StartDate >= filterDto.StartDate) &&
-                    (filterDto.EndDate == null || x.EndDate <= filterDto.EndDate) &&
-                    (filterDto.Keyword == null || x.Reason.Contains(filterDto.Keyword))
+                    (filterDto.employeeId == null || x.EmployeeId == filterDto.employeeId) &&
+                    (filterDto.status == null || x.Status == filterDto.status) &&
+                    (filterDto.leaveType == null || x.LeaveType == filterDto.leaveType) &&
+                    (filterDto.startDate == null || x.StartDate >= filterDto.startDate) &&
+                    (filterDto.endDate == null || x.EndDate <= filterDto.endDate) &&
+                    (filterDto.keyword == null || x.Reason.Contains(filterDto.keyword))
                 );
 
                 var totalItems = await query.CountAsync();
 
 
-                if (filterDto.SortBy?.ToLower() == "startdate")
+                if (filterDto.sortBy?.ToLower() == "startdate")
                 {
-                    query = filterDto.SortOrder?.ToLower() == "desc"
+                    query = filterDto.sortOrder?.ToLower() == "desc"
                         ? query.OrderByDescending(x => x.StartDate)
                         : query.OrderBy(x => x.StartDate);
                 }
                 else
                 {
-                    query = filterDto.SortOrder?.ToLower() == "desc"
+                    query = filterDto.sortOrder?.ToLower() == "desc"
                         ? query.OrderByDescending(x => x.CreatedAt)
                         : query.OrderBy(x => x.CreatedAt);
                 }
 
                 query = query
-                    .Skip(Math.Max(0, (filterDto.Page - 1)) * filterDto.PageSize)
-                    .Take(filterDto.PageSize);
+                    .Skip(Math.Max(0, (filterDto.page - 1)) * filterDto.pageSize)
+                    .Take(filterDto.pageSize);
 
                 var items = await query.ToListAsync();
 
@@ -161,8 +161,8 @@ namespace LeaveManagementSystem.DATA.Services
                 {
                     Items = items,
                     TotalItems = totalItems,
-                    Page = filterDto.Page,
-                    PageSize = filterDto.PageSize
+                    Page = filterDto.page,
+                    PageSize = filterDto.pageSize
                 };
 
                 return EntityResult<PagedResult<LeaveRequest>>.SuccessResult(pagedResult, "Filtered results retrieved.");
@@ -172,6 +172,36 @@ namespace LeaveManagementSystem.DATA.Services
                 return EntityResult<PagedResult<LeaveRequest>>.FailureResult($"Error during filtering: {ex.Message}");
             }
         }
+        public async Task<IEnumerable<LeaveReportDto>> GetLeaveReportAsync(LeaveReportFilterDto filter)
+        {
+            var query = _leaveRequestRepository.GetZ(l =>
+                l.StartDate.Year == filter.year &&
+                (filter.fromDate == null || l.EndDate >= filter.fromDate) &&
+                (filter.toDate == null || l.StartDate <= filter.toDate)
+            );
+
+            if (!string.IsNullOrEmpty(filter.department))
+                query = query.Include(x => x.Employee).Where(l => l.Employee.Department == filter.department);
+            else
+                query = query.Include(x => x.Employee);
+
+            var leaveList = await query.ToListAsync();
+
+            int GetOverlapDays(LeaveRequest leave)
+            {
+                var start = filter.fromDate.HasValue && leave.StartDate < filter.fromDate ? filter.fromDate.Value : leave.StartDate;
+                var end = filter.toDate.HasValue && leave.EndDate > filter.toDate ? filter.toDate.Value : leave.EndDate;
+                return (end - start).Days + 1;
+            }
+
+            var report = leaveList
+                .GroupBy(l => l.Employee.Id)
+                .Select(group => BuildLeaveReport(group, GetOverlapDays))
+                .ToList();
+
+            return report;
+        }
+
         public async Task<EntityResult<int>> ApproveLeaveRequestAsync(int id)
         {
             var leave = await _leaveRequestRepository.GetByIdAsync(id);
@@ -187,7 +217,28 @@ namespace LeaveManagementSystem.DATA.Services
 
             return EntityResult<int>.SuccessResult(result, "Leave request approved.");
         }
+        private LeaveReportDto BuildLeaveReport(IGrouping<int, LeaveRequest> group, Func<LeaveRequest, int> getOverlapDays)
+        {
+            var employee = group.First().Employee;
 
+            return new LeaveReportDto
+            {
+                Employee = new EmployeeDto
+                {
+                    Id = employee.Id,
+                    FullName = employee.FullName,
+                    Department = employee.Department,
+                    JoiningDate = employee.JoiningDate
+                },
+                TotalLeaves = group.Sum(getOverlapDays),
+                AnnualLeaves = group
+                    .Where(l => l.LeaveType == LeaveType.Annual)
+                    .Sum(getOverlapDays),
+                SickLeaves = group
+                    .Where(l => l.LeaveType == LeaveType.Sick)
+                    .Sum(getOverlapDays)
+            };
+        }
         private async Task<EntityResult<int>> ValidateLeaveRequestAsync(LeaveRequest leaveRequest)
         {
             if (await IsOverlappingLeaveDatesAsync(leaveRequest))
@@ -248,6 +299,7 @@ namespace LeaveManagementSystem.DATA.Services
         Task<EntityResult<int>> DeleteLeaveRequestAsync(int id);
         Task<EntityResult<int>> DeleteLeaveRequestAsync(LeaveRequest leaveRequest);
         Task<EntityResult<PagedResult<LeaveRequest>>> FilterLeaveRequestsAsync(LeaveRequestFilterDto filterDto);
+        Task<IEnumerable<LeaveReportDto>> GetLeaveReportAsync(LeaveReportFilterDto filter);
         Task<EntityResult<int>> ApproveLeaveRequestAsync(int id);
 
     }
