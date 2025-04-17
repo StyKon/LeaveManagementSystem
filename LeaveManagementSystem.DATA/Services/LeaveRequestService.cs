@@ -7,6 +7,7 @@ using LeaveManagementSystem.DATA.Common;
 using LeaveManagementSystem.DATA.Dto;
 using LeaveManagementSystem.DATA.Repositories;
 using LeaveManagementSystem.DOMAINE.Entities;
+using LeaveManagementSystem.DOMAINE.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeaveManagementSystem.DATA.Services
@@ -28,6 +29,10 @@ namespace LeaveManagementSystem.DATA.Services
 
             try
             {
+                var validationResult = await ValidateLeaveRequestAsync(leaveRequest);
+                if (!validationResult.Success)
+                    return validationResult;
+
                 var result = await _leaveRequestRepository.InsertAsync(leaveRequest);
                 return EntityResult<int>.SuccessResult(result, "Leave request created successfully.");
             }
@@ -66,7 +71,23 @@ namespace LeaveManagementSystem.DATA.Services
 
             try
             {
-                var result = await _leaveRequestRepository.UpdateAsync(leaveRequest);
+                var existing = await _leaveRequestRepository.GetByIdAsync(leaveRequest.Id);
+                if (existing == null)
+                    return EntityResult<int>.FailureResult("Leave request not found.");
+
+                var validationResult = await ValidateLeaveRequestAsync(leaveRequest);
+                if (!validationResult.Success)
+                    return validationResult;
+
+
+                existing.StartDate = leaveRequest.StartDate;
+                existing.EndDate = leaveRequest.EndDate;
+                existing.LeaveType = leaveRequest.LeaveType;
+                existing.Reason = leaveRequest.Reason;
+                existing.Status = leaveRequest.Status;
+                existing.EmployeeId = leaveRequest.EmployeeId;
+
+                var result = await _leaveRequestRepository.UpdateAsync(existing);
                 return EntityResult<int>.SuccessResult(result, "Leave request updated successfully.");
             }
             catch (Exception ex)
@@ -151,6 +172,57 @@ namespace LeaveManagementSystem.DATA.Services
                 return EntityResult<PagedResult<LeaveRequest>>.FailureResult($"Error during filtering: {ex.Message}");
             }
         }
+
+        private async Task<EntityResult<int>> ValidateLeaveRequestAsync(LeaveRequest leaveRequest)
+        {
+            if (await IsOverlappingLeaveDatesAsync(leaveRequest))
+                return EntityResult<int>.FailureResult("Employee already has overlapping leave during this period.");
+
+            if (leaveRequest.LeaveType == LeaveType.Annual &&
+                await HasExceededAnnualLeaveLimitAsync(leaveRequest))
+                return EntityResult<int>.FailureResult("Annual leave limit of 20 days per year exceeded.");
+
+            if (IsSickLeaveReasonInvalid(leaveRequest))
+                return EntityResult<int>.FailureResult("Sick leave requires a valid reason.");
+
+            return EntityResult<int>.SuccessResult(0);
+        }
+
+        private async Task<bool> IsOverlappingLeaveDatesAsync(LeaveRequest leaveRequest)
+        {
+            return await _leaveRequestRepository
+                .GetZ(x => x.EmployeeId == leaveRequest.EmployeeId &&
+                   (x.Id != leaveRequest.Id || leaveRequest.Id == 0) &&
+                           x.StartDate <= leaveRequest.EndDate &&
+                           x.EndDate >= leaveRequest.StartDate)
+                .AnyAsync();
+        }
+        private async Task<bool> HasExceededAnnualLeaveLimitAsync(LeaveRequest leaveRequest)
+        {
+            var year = leaveRequest.StartDate.Year;
+
+            var existingAnnualLeaves = await _leaveRequestRepository
+                .GetZ(x => x.EmployeeId == leaveRequest.EmployeeId &&
+                           x.LeaveType == LeaveType.Annual &&
+                           x.StartDate.Year == year &&
+                   (x.Id != leaveRequest.Id || leaveRequest.Id == 0)
+                   )
+                .ToListAsync();
+
+            var annualLeaveDaysTaken = existingAnnualLeaves.Sum(x =>
+                (x.EndDate - x.StartDate).Days + 1
+            );
+
+            var requestedDays = (leaveRequest.EndDate - leaveRequest.StartDate).Days + 1;
+
+            return (annualLeaveDaysTaken + requestedDays) > 20;
+        }
+        private bool IsSickLeaveReasonInvalid(LeaveRequest leaveRequest)
+        {
+            return leaveRequest.LeaveType == LeaveType.Sick &&
+                   string.IsNullOrWhiteSpace(leaveRequest.Reason);
+        }
+
     }
     public interface ILeaveRequestService
     {
