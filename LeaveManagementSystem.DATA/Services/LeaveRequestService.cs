@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LeaveManagementSystem.DATA.Common;
+﻿using LeaveManagementSystem.DATA.Common;
 using LeaveManagementSystem.DATA.Dto;
-using LeaveManagementSystem.DATA.Repositories;
+using LeaveManagementSystem.DATA.Repositories.Interfaces;
+using LeaveManagementSystem.DATA.Services.Interfaces;
 using LeaveManagementSystem.DOMAINE.Entities;
 using LeaveManagementSystem.DOMAINE.Enums;
 using Microsoft.EntityFrameworkCore;
@@ -66,9 +62,6 @@ namespace LeaveManagementSystem.DATA.Services
 
         public async Task<EntityResult<int>> UpdateLeaveRequestAsync(LeaveRequest leaveRequest)
         {
-            if (leaveRequest == null)
-                return EntityResult<int>.FailureResult("Leave request is null.");
-
             try
             {
                 var existing = await _leaveRequestRepository.GetByIdAsync(leaveRequest.Id);
@@ -137,17 +130,17 @@ namespace LeaveManagementSystem.DATA.Services
                 var totalItems = await query.CountAsync();
 
 
-                if (filterDto.sortBy?.ToLower() == "startdate")
+                switch (filterDto.sortBy?.ToLower())
                 {
-                    query = filterDto.sortOrder?.ToLower() == "desc"
-                        ? query.OrderByDescending(x => x.StartDate)
-                        : query.OrderBy(x => x.StartDate);
-                }
-                else
-                {
-                    query = filterDto.sortOrder?.ToLower() == "desc"
-                        ? query.OrderByDescending(x => x.CreatedAt)
-                        : query.OrderBy(x => x.CreatedAt);
+                    case "startdate":
+                        query = filterDto.sortOrder == "desc" ? query.OrderByDescending(x => x.StartDate) : query.OrderBy(x => x.StartDate);
+                        break;
+                    case "enddate":
+                        query = filterDto.sortOrder == "desc" ? query.OrderByDescending(x => x.EndDate) : query.OrderBy(x => x.EndDate);
+                        break;
+                    default:
+                        query = filterDto.sortOrder == "desc" ? query.OrderByDescending(x => x.CreatedAt) : query.OrderBy(x => x.CreatedAt);
+                        break;
                 }
 
                 query = query
@@ -288,19 +281,6 @@ namespace LeaveManagementSystem.DATA.Services
             return leaveRequest.LeaveType == LeaveType.Sick &&
                    string.IsNullOrWhiteSpace(leaveRequest.Reason);
         }
-
-    }
-    public interface ILeaveRequestService
-    {
-        Task<EntityResult<int>> CreateLeaveRequestAsync(LeaveRequest leaveRequest);
-        Task<EntityResult<IEnumerable<LeaveRequest>>> GetAllLeaveRequestsAsync();
-        Task<EntityResult<LeaveRequest>> GetLeaveRequestByIdAsync(int id);
-        Task<EntityResult<int>> UpdateLeaveRequestAsync(LeaveRequest leaveRequest);
-        Task<EntityResult<int>> DeleteLeaveRequestAsync(int id);
-        Task<EntityResult<int>> DeleteLeaveRequestAsync(LeaveRequest leaveRequest);
-        Task<EntityResult<PagedResult<LeaveRequest>>> FilterLeaveRequestsAsync(LeaveRequestFilterDto filterDto);
-        Task<IEnumerable<LeaveReportDto>> GetLeaveReportAsync(LeaveReportFilterDto filter);
-        Task<EntityResult<int>> ApproveLeaveRequestAsync(int id);
 
     }
 

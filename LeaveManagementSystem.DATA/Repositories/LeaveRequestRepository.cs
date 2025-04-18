@@ -1,4 +1,5 @@
-﻿using LeaveManagementSystem.DOMAINE.Entities;
+﻿using LeaveManagementSystem.DATA.Repositories.Interfaces;
+using LeaveManagementSystem.DOMAINE.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace LeaveManagementSystem.DATA.Repositories
@@ -8,9 +9,5 @@ namespace LeaveManagementSystem.DATA.Repositories
         public LeaveRequestRepository(DbContext context) : base(context)
         {
         }
-    }
-
-    public interface ILeaveRequestRepository : IBaseRepository<LeaveRequest>
-    {
     }
 }

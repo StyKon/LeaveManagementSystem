@@ -1,6 +1,4 @@
-﻿using System;
-using System.Globalization;
-using AutoMapper;
+﻿using AutoMapper;
 
 namespace LeaveManagementSystem.DATA.Mappings
 {

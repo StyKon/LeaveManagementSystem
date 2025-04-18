@@ -1,7 +1,7 @@
 using AutoMapper;
 using LeaveManagementSystem.DATA.Common;
 using LeaveManagementSystem.DATA.Dto;
-using LeaveManagementSystem.DATA.Services;
+using LeaveManagementSystem.DATA.Services.Interfaces;
 using LeaveManagementSystem.DOMAINE.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -68,7 +68,14 @@ namespace LeaveManagementSystem.Controllers
             if (leaveRequestDto == null)
                 return BadRequest("Leave request data is missing.");
 
+            if (leaveRequestDto.EndDate < leaveRequestDto.StartDate)
+                return BadRequest("End date must be after start date.");
+
+            if (leaveRequestDto.StartDate < DateTime.Today)
+                return BadRequest("Start date cannot be in the past.");
+
             var leaveRequest = _mapper.Map<LeaveRequest>(leaveRequestDto);
+
             leaveRequest.CreatedAt = DateTime.Now;
 
             var result = await _leaveRequestService.CreateLeaveRequestAsync(leaveRequest);
@@ -85,9 +92,8 @@ namespace LeaveManagementSystem.Controllers
             if (leaveRequestDto == null || id != leaveRequestDto.Id)
                 return BadRequest("Invalid leave request data.");
 
-            var existingResult = await _leaveRequestService.GetLeaveRequestByIdAsync(id);
-            if (!existingResult.Success || existingResult.Data == null)
-                return NotFound(existingResult.Message);
+            if (leaveRequestDto.EndDate < leaveRequestDto. StartDate)
+                return BadRequest("End date must be after start date.");
 
             var updatedLeaveRequest = _mapper.Map<LeaveRequest>(leaveRequestDto);
             updatedLeaveRequest.Id = id;

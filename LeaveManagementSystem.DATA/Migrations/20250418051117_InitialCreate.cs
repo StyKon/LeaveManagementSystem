@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace LeaveManagementSystem.DATA.Migrations
 {
     /// <inheritdoc />
@@ -37,7 +39,7 @@ namespace LeaveManagementSystem.DATA.Migrations
                     StartDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     EndDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Status = table.Column<int>(type: "INTEGER", nullable: false),
-                    Reason = table.Column<string>(type: "TEXT", nullable: false),
+                    Reason = table.Column<string>(type: "TEXT", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -54,12 +56,24 @@ namespace LeaveManagementSystem.DATA.Migrations
             migrationBuilder.InsertData(
                 table: "Employees",
                 columns: new[] { "Id", "Department", "FullName", "JoiningDate" },
-                values: new object[] { 1, "IT", "Khalil Frikha", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[,]
+                {
+                    { 1, "IT", "Khalil Frikha", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, "IT", "Ahmed", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 3, "IT", "Heni", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 4, "HR", "Mohamed", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 5, "HR", "Aicha", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 6, "Finance", "Nada", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                });
 
             migrationBuilder.InsertData(
                 table: "LeaveRequests",
                 columns: new[] { "Id", "CreatedAt", "EmployeeId", "EndDate", "LeaveType", "Reason", "StartDate", "Status" },
-                values: new object[] { 1, new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Local), 0, "Family needs", new DateTime(2025, 4, 17, 0, 0, 0, 0, DateTimeKind.Local), 0 });
+                values: new object[,]
+                {
+                    { 1, new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Local), 0, "Family needs", new DateTime(2025, 4, 17, 0, 0, 0, 0, DateTimeKind.Local), 0 },
+                    { 2, new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 5, new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Local), 0, null, new DateTime(2025, 4, 17, 0, 0, 0, 0, DateTimeKind.Local), 0 }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_LeaveRequests_EmployeeId",

@@ -331,3 +331,4 @@ C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebAp
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebApi\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebApi\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebApi\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Khouloud\source\repos\LeaveManagementSystem\LeaveManagementSystem.WebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaveManagementSystem.DATA.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250418011922_InitialCreate")]
+    [Migration("20250418051117_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -48,6 +48,41 @@ namespace LeaveManagementSystem.DATA.Migrations
                             Department = "IT",
                             FullName = "Khalil Frikha",
                             JoiningDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Department = "IT",
+                            FullName = "Ahmed",
+                            JoiningDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Department = "IT",
+                            FullName = "Heni",
+                            JoiningDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Department = "HR",
+                            FullName = "Mohamed",
+                            JoiningDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Department = "HR",
+                            FullName = "Aicha",
+                            JoiningDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Department = "Finance",
+                            FullName = "Nada",
+                            JoiningDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -70,7 +105,6 @@ namespace LeaveManagementSystem.DATA.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Reason")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("StartDate")
@@ -94,6 +128,16 @@ namespace LeaveManagementSystem.DATA.Migrations
                             EndDate = new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             LeaveType = 0,
                             Reason = "Family needs",
+                            StartDate = new DateTime(2025, 4, 17, 0, 0, 0, 0, DateTimeKind.Local),
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EmployeeId = 5,
+                            EndDate = new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Local),
+                            LeaveType = 0,
                             StartDate = new DateTime(2025, 4, 17, 0, 0, 0, 0, DateTimeKind.Local),
                             Status = 0
                         });

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using LeaveManagementSystem.DOMAINE.Enums;
+﻿using LeaveManagementSystem.DOMAINE.Enums;
 
 namespace LeaveManagementSystem.DATA.Dto
 {
