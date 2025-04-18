@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace LeaveManagementSystem.DATA.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -59,7 +59,7 @@ namespace LeaveManagementSystem.DATA.Migrations
             migrationBuilder.InsertData(
                 table: "LeaveRequests",
                 columns: new[] { "Id", "CreatedAt", "EmployeeId", "EndDate", "LeaveType", "Reason", "StartDate", "Status" },
-                values: new object[] { 1, new DateTime(2025, 4, 16, 7, 18, 27, 661, DateTimeKind.Local).AddTicks(2580), 1, new DateTime(2025, 4, 21, 0, 0, 0, 0, DateTimeKind.Local), 0, "Family needs", new DateTime(2025, 4, 16, 0, 0, 0, 0, DateTimeKind.Local), 0 });
+                values: new object[] { 1, new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Local), 0, "Family needs", new DateTime(2025, 4, 17, 0, 0, 0, 0, DateTimeKind.Local), 0 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_LeaveRequests_EmployeeId",

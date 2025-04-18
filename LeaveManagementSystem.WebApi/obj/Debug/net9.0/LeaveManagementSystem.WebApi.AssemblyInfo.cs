@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("406c5b39-3e02-4079-9d39-81d3303a3659")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeaveManagementSystem.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fe585a8db35c19cae35eb574f7ed289747d09d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07b3add79a697d9e55b760d56197aaa24c5f5b88")]
 [assembly: System.Reflection.AssemblyProductAttribute("LeaveManagementSystem.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LeaveManagementSystem.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

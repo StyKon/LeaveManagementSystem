@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaveManagementSystem.DATA.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250416141829_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20250418011922_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -89,12 +89,12 @@ namespace LeaveManagementSystem.DATA.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 4, 16, 7, 18, 27, 661, DateTimeKind.Local).AddTicks(2580),
+                            CreatedAt = new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EmployeeId = 1,
-                            EndDate = new DateTime(2025, 4, 21, 0, 0, 0, 0, DateTimeKind.Local),
+                            EndDate = new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             LeaveType = 0,
                             Reason = "Family needs",
-                            StartDate = new DateTime(2025, 4, 16, 0, 0, 0, 0, DateTimeKind.Local),
+                            StartDate = new DateTime(2025, 4, 17, 0, 0, 0, 0, DateTimeKind.Local),
                             Status = 0
                         });
                 });

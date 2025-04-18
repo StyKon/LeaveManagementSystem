@@ -3,44 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\services\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\services\\leaverequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C2BDB43-4258-4978-AE17-B8DBCC59FD21}|LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C2BDB43-4258-4978-AE17-B8DBCC59FD21}|LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj|solutionrelative:leavemanagementsystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\dto\\leaverequestfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\dto\\leaverequestfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\dto\\leavereportfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\dto\\leavereportfilterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\migrations\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\migrations\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\migrations\\20250418011922_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\migrations\\20250418011922_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C2BDB43-4258-4978-AE17-B8DBCC59FD21}|LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8C2BDB43-4258-4978-AE17-B8DBCC59FD21}|LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj|solutionrelative:leavemanagementsystem.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\leavemanagementsystem.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\leavemanagementsystem.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C2BDB43-4258-4978-AE17-B8DBCC59FD21}|LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.webapi\\leavemanagementsystem.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8C2BDB43-4258-4978-AE17-B8DBCC59FD21}|LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj|solutionrelative:leavemanagementsystem.webapi\\leavemanagementsystem.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C2BDB43-4258-4978-AE17-B8DBCC59FD21}|LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.webapi\\controllers\\leaverequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C2BDB43-4258-4978-AE17-B8DBCC59FD21}|LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj|solutionrelative:leavemanagementsystem.webapi\\controllers\\leaverequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\dto\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\dto\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\dto\\leavereportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\dto\\leavereportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\repositories\\leaverequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\repositories\\leaverequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{778342ED-043B-46D7-AFAD-550B35924D5C}|LeaveManagementSystem.DOMAINE\\LeaveManagementSystem.DOMAINE.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.domaine\\enums\\leavetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{778342ED-043B-46D7-AFAD-550B35924D5C}|LeaveManagementSystem.DOMAINE\\LeaveManagementSystem.DOMAINE.csproj|solutionrelative:leavemanagementsystem.domaine\\enums\\leavetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|c:\\users\\khouloud\\source\\repos\\leavemanagementsystem\\leavemanagementsystem.data\\mappings\\entitytodtomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{899D68F4-66A1-4040-B597-606E7F17F255}|LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj|solutionrelative:leavemanagementsystem.data\\mappings\\entitytodtomapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,133 +50,137 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LeaveRequestFilterDto.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Dto\\LeaveRequestFilterDto.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Dto\\LeaveRequestFilterDto.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Dto\\LeaveRequestFilterDto.cs",
-              "RelativeToolTip": "LeaveManagementSystem.DATA\\Dto\\LeaveRequestFilterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:12:54.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LeaveRequestService.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Services\\LeaveRequestService.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Services\\LeaveRequestService.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Services\\LeaveRequestService.cs",
-              "RelativeToolTip": "LeaveManagementSystem.DATA\\Services\\LeaveRequestService.cs",
-              "ViewState": "AgIAANoAAAAAAAAAAIAwwOUAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:44:27.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LeaveReportFilterDto.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Dto\\LeaveReportFilterDto.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Dto\\LeaveReportFilterDto.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Dto\\LeaveReportFilterDto.cs",
-              "RelativeToolTip": "LeaveManagementSystem.DATA\\Dto\\LeaveReportFilterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Migrations\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Migrations\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Migrations\\AppDbContext.cs",
+              "RelativeToolTip": "LeaveManagementSystem.DATA\\Migrations\\AppDbContext.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAACMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T16:07:47.012Z",
+              "WhenOpened": "2025-04-18T00:55:10.633Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LeaveRequestController.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\Controllers\\LeaveRequestController.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.WebApi\\Controllers\\LeaveRequestController.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\Controllers\\LeaveRequestController.cs",
-              "RelativeToolTip": "LeaveManagementSystem.WebApi\\Controllers\\LeaveRequestController.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHUAAABTAAAAAAAAAA==",
+              "Title": "20250418011922_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Migrations\\20250418011922_InitialCreate.cs",
+              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Migrations\\20250418011922_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Migrations\\20250418011922_InitialCreate.cs",
+              "RelativeToolTip": "LeaveManagementSystem.DATA\\Migrations\\20250418011922_InitialCreate.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:35:49.235Z",
+              "WhenOpened": "2025-04-18T01:24:15.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "LeaveManagementSystem.DATA\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAgwG4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:24:27.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "LeaveManagementSystem.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\Program.cs",
+              "RelativeToolTip": "LeaveManagementSystem.WebApi\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T01:21:14.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EmployeeDto.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Dto\\EmployeeDto.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Dto\\EmployeeDto.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Dto\\EmployeeDto.cs",
-              "RelativeToolTip": "LeaveManagementSystem.DATA\\Dto\\EmployeeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:32:40.024Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "LeaveManagementSystem.WebApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\appsettings.json",
+              "RelativeToolTip": "LeaveManagementSystem.WebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-18T01:21:20.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "LeaveReportDto.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Dto\\LeaveReportDto.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Dto\\LeaveReportDto.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Dto\\LeaveReportDto.cs",
-              "RelativeToolTip": "LeaveManagementSystem.DATA\\Dto\\LeaveReportDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T15:20:55.875Z",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAADcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-17T18:57:08.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "LeaveRequestRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Repositories\\LeaveRequestRepository.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Repositories\\LeaveRequestRepository.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Repositories\\LeaveRequestRepository.cs",
-              "RelativeToolTip": "LeaveManagementSystem.DATA\\Repositories\\LeaveRequestRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:11:49.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Repositories\\BaseRepository.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "LeaveManagementSystem.DATA\\Repositories\\BaseRepository.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAywMQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T01:56:36.994Z"
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-04-17T22:41:23.286Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "LeaveType.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DOMAINE\\Enums\\LeaveType.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.DOMAINE\\Enums\\LeaveType.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DOMAINE\\Enums\\LeaveType.cs",
-              "RelativeToolTip": "LeaveManagementSystem.DOMAINE\\Enums\\LeaveType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:49:10.905Z"
+              "Title": "LeaveManagementSystem.WebApi",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj",
+              "RelativeDocumentMoniker": "LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj",
+              "RelativeToolTip": "LeaveManagementSystem.WebApi\\LeaveManagementSystem.WebApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-17T18:41:04.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LeaveManagementSystem.DATA",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj",
+              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj",
+              "RelativeToolTip": "LeaveManagementSystem.DATA\\LeaveManagementSystem.DATA.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAsAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-17T23:39:14.198Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "EntityToDtoMapping.cs",
-              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Mappings\\EntityToDtoMapping.cs",
-              "RelativeDocumentMoniker": "LeaveManagementSystem.DATA\\Mappings\\EntityToDtoMapping.cs",
-              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.DATA\\Mappings\\EntityToDtoMapping.cs",
-              "RelativeToolTip": "LeaveManagementSystem.DATA\\Mappings\\EntityToDtoMapping.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
+              "Title": "LeaveRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\Controllers\\LeaveRequestController.cs",
+              "RelativeDocumentMoniker": "LeaveManagementSystem.WebApi\\Controllers\\LeaveRequestController.cs",
+              "ToolTip": "C:\\Users\\Khouloud\\source\\repos\\LeaveManagementSystem\\LeaveManagementSystem.WebApi\\Controllers\\LeaveRequestController.cs",
+              "RelativeToolTip": "LeaveManagementSystem.WebApi\\Controllers\\LeaveRequestController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowAoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T02:01:51.147Z"
+              "WhenOpened": "2025-04-17T22:18:10.45Z",
+              "EditorCaption": ""
             }
           ]
         }
