@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "7d350c29-1d8e-4e61-923c-8fa08ecb5daf",
+		"name": "Leave Management System API",
+		"description": "Postman collection for Leave Management System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19641062"
+	},
+	"item": [
+		{
+			"name": "Get All Leave Requests",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/leaverequests",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Leave Request By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/leaverequests/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Leave Requests",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/leaverequests/filter?employeeId=1&status=Approved&page=1&pageSize=10",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "employeeId",
+							"value": "1"
+						},
+						{
+							"key": "status",
+							"value": "Approved"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Leave Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeId\": 1,\n    \"leaveType\": \"Annual\",\n    \"startDate\": \"2025-06-01\",\n    \"endDate\": \"2025-06-10\",\n    \"reason\": \"Vacation\",\n    \"status\": \"Pending\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/leaverequests",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Leave Request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"employeeId\": 1,\n    \"startDate\": \"2025-05-10\",\n    \"endDate\": \"2025-05-15\",\n    \"leaveType\": \"Annual\",\n    \"reason\": \"Extended Vacation\",\n    \"status\": \"Pending\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/leaverequests/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Leave Request",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/leaverequests/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/leaverequests/report?year=2025&fromDate=2025-01-01&toDate=2025-12-31&department=IT",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"report"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2025"
+						},
+						{
+							"key": "fromDate",
+							"value": "2025-01-01"
+						},
+						{
+							"key": "toDate",
+							"value": "2025-12-31"
+						},
+						{
+							"key": "department",
+							"value": "IT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Leave Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/leaverequests/1/approve",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"leaverequests",
+						"1",
+						"approve"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
