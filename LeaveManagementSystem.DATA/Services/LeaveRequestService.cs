@@ -170,7 +170,8 @@ namespace LeaveManagementSystem.DATA.Services
             var query = _leaveRequestRepository.GetZ(l =>
                 l.StartDate.Year == filter.year &&
                 (filter.fromDate == null || l.EndDate >= filter.fromDate) &&
-                (filter.toDate == null || l.StartDate <= filter.toDate)
+                (filter.toDate == null || l.StartDate <= filter.toDate) &&
+                l.Status == LeaveStatus.Approved
             );
 
             if (!string.IsNullOrEmpty(filter.department))

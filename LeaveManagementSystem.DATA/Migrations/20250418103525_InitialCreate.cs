@@ -71,8 +71,8 @@ namespace LeaveManagementSystem.DATA.Migrations
                 columns: new[] { "Id", "CreatedAt", "EmployeeId", "EndDate", "LeaveType", "Reason", "StartDate", "Status" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Local), 0, "Family needs", new DateTime(2025, 4, 17, 0, 0, 0, 0, DateTimeKind.Local), 0 },
-                    { 2, new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 5, new DateTime(2025, 4, 22, 0, 0, 0, 0, DateTimeKind.Local), 0, null, new DateTime(2025, 4, 17, 0, 0, 0, 0, DateTimeKind.Local), 0 }
+                    { 1, new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, new DateTime(2025, 4, 23, 0, 0, 0, 0, DateTimeKind.Local), 0, "Family needs", new DateTime(2025, 4, 18, 0, 0, 0, 0, DateTimeKind.Local), 1 },
+                    { 2, new DateTime(2024, 4, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 5, new DateTime(2025, 4, 23, 0, 0, 0, 0, DateTimeKind.Local), 0, null, new DateTime(2025, 4, 18, 0, 0, 0, 0, DateTimeKind.Local), 1 }
                 });
 
             migrationBuilder.CreateIndex(

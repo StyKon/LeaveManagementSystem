@@ -33,7 +33,7 @@ namespace LeaveManagementSystem.DATA.Migrations
                 LeaveType = LeaveType.Annual,
                 StartDate = DateTime.Today,
                 EndDate = DateTime.Today.AddDays(5),
-                Status = LeaveStatus.Pending,
+                Status = LeaveStatus.Approved,
                 Reason = "Family needs",
                 CreatedAt = new DateTime(2024, 4, 16)
             },
@@ -44,7 +44,7 @@ namespace LeaveManagementSystem.DATA.Migrations
                  LeaveType = LeaveType.Annual,
                  StartDate = DateTime.Today,
                  EndDate = DateTime.Today.AddDays(5),
-                 Status = LeaveStatus.Pending,
+                 Status = LeaveStatus.Approved,
                  Reason = null,
                  CreatedAt = new DateTime(2024, 4, 16)
              }
