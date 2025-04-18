@@ -371,21 +371,19 @@
       },
       "LeaveStatus": {
         "enum": [
-          0,
-          1,
-          2
+          "Pending",
+          "Approved",
+          "Rejected"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       },
       "LeaveType": {
         "enum": [
-          0,
-          1,
-          2
+          "Annual",
+          "Sick",
+          "Other"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       }
     }
   }

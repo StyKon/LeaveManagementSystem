@@ -1,4 +1,5 @@
-﻿using LeaveManagementSystem.DATA.Mappings;
+﻿using System.Text.Json.Serialization;
+using LeaveManagementSystem.DATA.Mappings;
 using LeaveManagementSystem.DATA.Migrations;
 using LeaveManagementSystem.DATA.Repositories;
 using LeaveManagementSystem.DATA.Repositories.Interfaces;
@@ -9,7 +10,12 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Controllers & Swagger
-builder.Services.AddControllers();
+builder.Services
+  .AddControllers()
+  .AddJsonOptions(opts =>
+  {
+      opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+  });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
