@@ -138,16 +138,16 @@ Update `appsettings.json` with your connection string if needed:
 
 ## API Endpoints
 
-| Method | Route                             | Description                             |
-|--------|----------------------------------|-----------------------------------------|
-| GET    | `/api/leaverequests`             | Get all leave requests                  |
-| GET    | `/api/leaverequests/filter`      | Filter and paginate leave requests      |
-| GET    | `/api/leaverequests/{id}`        | Get leave request by ID                 |
-| POST   | `/api/leaverequests`             | Create a new leave request              |
-| PUT    | `/api/leaverequests/{id}`        | Update a leave request                  |
-| DELETE | `/api/leaverequests/{id}`        | Delete a leave request                  |
-| POST   | `/api/leaverequests/{id}/approve`| Approve a pending request               |
-| GET    | `/api/leaverequests/report`      | Generate report by year and department  |
+| Method | Route                             | Description                                                                                |
+|--------|----------------------------------|--------------------------------------------------------------------------------------------|
+| GET    | `/api/leaverequests`             | Get all leave requests                                                                     |
+| GET    | `/api/leaverequests/filter`      | Filter and paginate leave requests                                                         |
+| GET    | `/api/leaverequests/{id}`        | Get leave request by ID                                                                    |
+| POST   | `/api/leaverequests`             | Create a new leave request                                                                 |
+| PUT    | `/api/leaverequests/{id}`        | Update a leave request                                                                     |
+| DELETE | `/api/leaverequests/{id}`        | Delete a leave request                                                                     |
+| POST   | `/api/leaverequests/{id}/approve`| Approve a pending request                                                                  |
+| GET    | `/api/leaverequests/report`      | Generate a report of approved leave requests filtered by year, date range, and department  |
 
 ---
 
